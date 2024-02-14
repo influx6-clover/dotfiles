@@ -1,0 +1,41 @@
+#!/bin/env bash
+
+# Add more using 'source $HOME/Devlabs/cmd/@PATH'
+
+
+export LANG=en_US.UTF-8
+export Dotfiles=$HOME/dotfiles
+
+source $Dotfiles/Mackup/sops
+source $Dotfiles/Mackup/exits
+source $Dotfiles/Mackup/ca
+source $Dotfiles/Mackup/paths
+source $Dotfiles/Mackup/doom
+source $Dotfiles/Mackup/brew
+source $Dotfiles/Mackup/alias
+source $Dotfiles/Mackup/cargo
+source $Dotfiles/Mackup/pyenv
+source $Dotfiles/Mackup/editor
+source $Dotfiles/Mackup/deno
+source $Dotfiles/Mackup/ssh
+source $Dotfiles/Mackup/sha
+source $Dotfiles/Mackup/emsdk
+source $Dotfiles/Mackup/golang
+source $Dotfiles/Mackup/git
+source $Dotfiles/Mackup/kubectl
+source $Dotfiles/Mackup/net
+source $Dotfiles/Mackup/android
+source $Dotfiles/Mackup/functions
+source $Dotfiles/Mackup/docker
+source $Dotfiles/Mackup/microk8s
+source $Dotfiles/Mackup/python
+source $Dotfiles/Mackup/flutter
+source $Dotfiles/Mackup/sdkman
+source $Dotfiles/Mackup/ssh-agent
+source $Dotfiles/Mackup/ansible
+source $Dotfiles/Mackup/nodejs
+source $Dotfiles/Mackup/rust
+source $Dotfiles/Mackup/rbenv
+source $Dotfiles/Mackup/wasm
+source $Dotfiles/Mackup/youtube
+

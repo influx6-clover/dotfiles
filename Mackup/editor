@@ -1,0 +1,3 @@
+#!/bin/sh
+
+export REACT_EDITOR=emacs

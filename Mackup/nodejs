@@ -1,0 +1,12 @@
+#!/bin/bash
+
+if  ! command -v 'argon2-cli' &> /dev/null
+then
+  if command -v 'npm' &> /dev/null; then
+     npm install -g argon2-cli
+  fi
+fi
+
+hash_argon2() {
+  echo -n "$1"| argon2-cli -e
+}
