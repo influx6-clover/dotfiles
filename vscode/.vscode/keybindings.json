@@ -88,7 +88,7 @@
     {
         "key": "cmd+k shift+cmd+w",
         "command": "-workbench.action.closeAllGroups"
-    }
+    },
     // -- File Explorer Navigation ----
     {
         "key": "tab+shift+a",
