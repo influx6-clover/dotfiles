@@ -9,6 +9,11 @@
         "command": "workbench.action.terminal.toggleTerminal"
     },
     {
+        "key": "tab w",
+        "command": "whichkey.show",
+        // "when": "vim.mode != 'insert' && !inputFocus"
+    },
+    {
         "key": "tab t",
         "command": "workbench.action.terminal.focus"
     },
@@ -68,6 +73,12 @@
         "command": "-workbench.action.quickOpen"
     },
     // -- File Explorer Navigation ----
+    {
+        "key": "tab+shift+a",
+        "command": "toggleexcludedfiles.toggle",
+        "name": "toggles excluded files to be shown/hidden",
+        "when": "explorerViewletVisible && filesExplorerFocus"
+    },
     {
         "key": "r",
         "command": "renameFile",
