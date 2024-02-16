@@ -1,19 +1,50 @@
 {
+    // Default Settings we prefer grouping ---
+    // We can use Geist Mono
+    "editor.fontFamily": "Geist Mono",
+    "scm.inputFontFamily": "Geist Mono",
+    "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
+    "chat.editor.fontFamily": "Geist Mono",
+    "debug.console.fontFamily": "Geist Mono",
+    "editor.codeLensFontFamily": "Geist Mono",
+    "notebook.output.fontFamily": "Geist Mono",
+    "markdown.preview.fontFamily": "Geist Mono",
+    "editor.inlayHints.fontFamily": "Geist Mono",
+    //
+    // OR
+    //
+    // We can use Geist Mono instead of Fira Code
+    // "editor.fontFamily": "Fira Code",
+    // "scm.inputFontFamily": "Fira Code",
+    // "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
+    // "chat.editor.fontFamily": "Fira Code",
+    // "debug.console.fontFamily": "Fira Code",
+    // "editor.codeLensFontFamily": "Fira Code",
+    // "notebook.output.fontFamily": "Fira Code",
+    // "markdown.preview.fontFamily": "Fira Code",
+    // "editor.inlayHints.fontFamily": "Fira Code",
+    // End of Default Settings we prefer grouping ---
+    //
+    "vscode_custom_css.imports": [
+        "${workspaceFolder}/.vscode/custom_theme.css"
+    ],
     "diffEditor": {
         // Show me whitespace in diffs, just in case some slips through, shows up in the GitHub PR, and I look like a dummy.
         "ignoreTrimWhitespace": false
     },
     "explorer": {
+        "compactFolders": false,
         "openEditors": {
             "visible": 1
         }
     },
-    "vscode_custom_css.imports": [
-        "${workspaceFolder}/.vscode/custom_theme.css"
-    ],
+    "window": {
+        "commandCenter": false,
+        // "zoomLevel": 0.75,
+    },
     "terminal": {
         "integrated": {
-            "fontSize": 13,
+            "fontSize": 14,
             "lineHeight": 1.5,
             "cursorBlinking": false,
             "cursorStyle": "line",
@@ -32,7 +63,12 @@
         "enableOnDiffView": true,
     },
     "editor": {
+        "linkedEditing": true,
+        "bracketPairColorization": {
+            "enabled": true
+        },
         "guides": {
+            "bracketPairs": true,
             "indentation": false
         },
         "multiCursorModifier": "ctrlCmd",
@@ -45,8 +81,15 @@
         },
         "window": {
             "title": "${activeEditorMedium}${separator}${rootName} ${dirty}",
+            "titleBar": "custom"
         },
-        "minimap.enabled": false,
+        "scrollbar": {
+            "vertical": "auto",
+            "horizontal": "auto"
+        },
+        "minimap": {
+            "enabled": false
+        },
         "codeLens": false,
         "renderControlCharacters": false,
         "renderIndentGuides": false,
@@ -58,7 +101,6 @@
         "fontSize": 14,
         "lineHeight": 22,
         "letterSpacing": 0,
-        "fontFamily": "Fira Code",
         "suggestFontSize": 16,
         "suggestLineHeight": 28,
         "fontLigatures": true,
@@ -97,17 +139,53 @@
         "trimTrailingWhitespace": true,
         "trimFinalNewlines": true,
         "associations": {
-            // ".php_cs": "php",
-            // ".php_cs.dist": "php",
-            // "*.php": "php",
+            ".php_cs": "php",
+            ".php_cs.dist": "php",
+            "*.php": "php",
             "*.python": "python"
+        },
+        "exclude": {
+            "**/.git": false,
+            "**/.svn": false,
+            "**/.hg": false,
+            "**/CVS": false,
+            "**/.DS_Store": false,
+            "**/Thumbs.db": false,
+            "**/node_modules": false,
+            "**/.next": false,
+            "**/.husky": false,
+            "**/drizzle": false,
+            "**/dist": false,
+            "**/.todo.md": false,
+            "**/.vscode": false,
+            "**/.eslintrc.cjs": false,
+            "**/.editorconfig": false,
+            "**/.gitignore": false,
+            "**/.lintstagedrc.mjs": false,
+            "**/.markdownlint.json": false,
+            "**/.markdownlintignore": false,
+            "**/.prettierignore": false,
+            "**/bun.lockb": false,
+            "**/cspell.json": false,
+            "**/package-lock.json": false,
+            "**/pnpm-lock.yaml": false,
+            "**/next-env.d.ts": false,
+            "**/postcss.config.cjs": false,
+            "**/prettier.config.js": false,
+            "**/README.md": false,
+            "**/next.config.js": false,
+            "**/tailwind.config.ts": false,
+            "**/drizzle.config.ts": false,
+            "**/migrate.ts": false,
+            "**/.env.example": false
         }
     },
     "extensions": {
         "experimental": {
             "affinity": {
                 // To improve performance
-                "vscodevim.vim": 1
+                "vscodevim.vim": 1,
+                // "asvetliakov.vscode-neovim": 1
             }
         }
     },
@@ -195,6 +273,9 @@
             }
         }
     },
+    "[markdown]": {
+        "files.trimTrailingWhitespace": false
+    },
     "workbench": {
         "fontAliasing": "antialiased",
         "iconTheme": "vscode-icons",
@@ -207,9 +288,13 @@
         },
         "startupEditor": "none",
         "sideBar": {
-            "location": "right",
+            "location": "right"
+        },
+        "activityBar": {
+            "location": "hidden"
         },
         "settings": {
+            "editor": "JSON with Comments",
             "applyToAllProfiles": [
                 "workbench.sideBar.location",
                 "workbench.editor.showTabs",
@@ -219,6 +304,55 @@
             ],
         }
     },
-    "workbench.activityBar.location": "hidden",
-    "editor.minimap.enabled": false,
+    // NeoVim
+    "vscode-neovim": {
+        "neovimInitVimPaths": {
+            "darwin": "$HOME/.config/nvim-vscode/init.vim"
+        },
+        "neovimExecutablePaths": {
+            "darwin": "/opt/homebrew/bin/nvim",
+        }
+    },
+    // APC customizations
+    "apc.font.family": "Geist Mono",
+    "apc.monospace.font.family": "Geist Mono",
+    "apc.statusBar": {
+        "position": "editor-bottom",
+        "height": 28,
+        "fontSize": 12
+    },
+    "apc.activityBar": {
+        "position": "bottom",
+        "hideSettings": true,
+        "size": 28
+    },
+    "apc.electron": {
+        "titleBarStyle": "hiddenInset",
+        "trafficLightPosition": {
+            "x": 12,
+            "y": 10
+        }
+    },
+    // Cusom css
+    "apc.stylesheet": {
+        ".sidebar > .composite": "height: 12px !important",
+        ".title-label": "display: none !important",
+        ".title-actions": "display: none !important",
+        ".tabs-and-actions-container > .editor-actions": "display: none !important",
+        ".titlebar-center": "display: none !important",
+        ".titlebar-right": "display: none !important",
+        ".inline-tabs-placeholder": "display: none !important",
+        ".split-view-view .visible": "background-color: #110f17 !important"
+    },
+    // Aura theme customisation
+    "workbench.colorCustomizations": {
+        "[Aura Dark]": {
+            "editor.background": "#110f17",
+            "terminal.background": "#110f17",
+            "activityBar.background": "#110f17",
+            "statusBar.background": "#110f17",
+            "editorGroupHeader.tabsBackground": "#110f17",
+            "tab.inactiveBackground": "#110f17"
+        }
+    },
 }

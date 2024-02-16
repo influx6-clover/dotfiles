@@ -1,73 +1,59 @@
 [
     {
-        "key": "shfit+tab",
-        "command": "type",
-        "args": {
-            "text": "\t"
-        },
-        "when": "terminalFocus"
-    },
-    {
         "key": "cmd+alt+r",
         "command": "workbench.action.reloadWindow",
         "when": "editorTextFocus"
     },
     {
-        "key": "tab t",
-        "command": "workbench.action.terminal.toggleTerminal",
-        "when": "vim.active && vim.mode != 'Insert'"
+        "key": "shift+ctrl+t",
+        "command": "workbench.action.terminal.toggleTerminal"
     },
     {
         "key": "tab t",
-        "command": "workbench.action.terminal.focus",
-        // "when": "!terminalFocus"
-        "when": "vim.active && vim.mode != 'Insert' && !terminalFocus"
+        "command": "workbench.action.terminal.focus"
     },
     {
         "key": "tab right",
-        "command": "workbench.action.terminal.focusNext",
-        "when": "vim.active && vim.mode != 'Insert'"
+        "command": "workbench.action.terminal.focusNext"
     },
     {
         "key": "tab left",
-        "command": "workbench.action.terminal.focusPrevious",
-        // "when": "terminalFocus"
-        "when": "vim.active && vim.mode != 'Insert'"
+        "command": "workbench.action.terminal.focusPrevious"
     },
     {
         "key": "tab z",
-        "command": "workbench.action.toggleZenMode",
-        "when": "vim.active && vim.mode != 'Insert'"
+        "command": "workbench.action.toggleZenMode"
     },
     {
         "key": "tab g",
         "command": "workbench.view.scm",
-        "when": "vim.active && vim.mode != 'Insert'"
     },
     {
         "key": "tab e",
         "command": "workbench.view.explorer",
-        "when": "vim.active && vim.mode != 'Insert'"
     },
     {
         "key": "tab d",
         "command": "workbench.view.debug",
-        "when": "vim.active && vim.mode != 'Insert'"
     },
     {
         "key": "tab x",
         "command": "workbench.view.extensions",
-        "when": "vim.active && vim.mode != 'Insert'"
     },
     {
         "key": "tab s",
+        "name": "focus on active text editor",
         "command": "workbench.action.focusActiveEditorGroup",
-        "when": "vim.active && vim.mode != 'Insert'"
+    },
+    {
+        "key": "tab q",
+        "name": "Close file",
+        "type": "command",
+        "command": "workbench.action.closeActiveEditor"
     },
     {
         "key": "tab tab",
         "command": "workbench.action.showCommands",
-        "when": "vim.active && vim.mode != 'Insert'"
     },
     {
         "key": "shift+cmd+p",
@@ -76,10 +62,108 @@
     {
         "key": "tab f",
         "command": "workbench.action.quickOpen",
-        "when": "vim.active && vim.mode != 'Insert'"
     },
     {
         "key": "cmd+p",
         "command": "-workbench.action.quickOpen"
+    },
+    // -- File Explorer Navigation ----
+    {
+        "key": "r",
+        "command": "renameFile",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+    },
+    {
+        "key": "enter",
+        "command": "-renameFile",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+    },
+    {
+        "key": "j",
+        "command": "list.focusDown",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+    },
+    {
+        "key": "k",
+        "command": "list.focusUp",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "selectNextSuggestion",
+        "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "selectPrevSuggestion",
+        "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "workbench.action.quickOpenNavigateNext",
+        "when": "inQuickOpen"
+    },
+    {
+        "key": "enter",
+        "command": "list.select",
+        "when": "explorerViewletVisible && filesExplorerFocus"
+    },
+    {
+        "key": "l",
+        "command": "list.select",
+        "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
+    },
+    {
+        "key": "o",
+        "command": "list.toggleExpand",
+        "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
+    },
+    {
+        "key": "h",
+        "command": "list.collapse",
+        "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
+    },
+    {
+        "key": "a",
+        "command": "explorer.newFile",
+        "when": "filesExplorerFocus && !inputFocus"
+    },
+    {
+        "key": "shift+a",
+        "command": "explorer.newFolder",
+        "when": "filesExplorerFocus && !inputFocus"
+    },
+    {
+        "key": "shift+;",
+        "command": "insertPrevSuggestion",
+        "when": "hasOtherSuggestions && textInputFocus && textInputFocus && !inSnippetMode && !suggestWidgetVisible && config.editor.tabCompletion == 'on'"
+    },
+    {
+        "key": "shift+k",
+        "command": "editor.action.showHover",
+        "when": "editorTextFocus && (neovim.mode != 'insert' || vim.mode != 'insert')"
+    },
+    {
+        "key": "ctrl+k ctrl+i",
+        "command": "-editor.action.showHover",
+        "when": "editorTextFocus"
+    },
+    // -- Key Customization Overrides ----
+    {
+        "key": "tab",
+        "command": "type",
+        "args": {
+            "text": "\t"
+        },
+        "when": "vim.active && vim.mode == 'Insert'"
+    },
+    {
+        "key": "shfit+tab",
+        "command": "type",
+        "args": {
+            "text": "\t"
+        },
+        "when": "terminalFocus"
     }
+    // -- End of Key Customization Overrides ----
 ]
