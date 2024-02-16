@@ -192,6 +192,6 @@
             "text": "\t"
         },
         "when": "terminalFocus"
-    },
+    }
     // -- End of Key Customization Overrides ----
 ]
