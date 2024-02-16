@@ -1,2 +1,0 @@
-#!/bin/sh
-lxsession -e LXDE -s Lubuntu

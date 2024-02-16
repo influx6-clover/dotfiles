@@ -5,8 +5,8 @@ LOG?=false
 BOOK?=""
 VERBOSITY=-vv
 
-ANSIBLE_ROOT_DIR=${PWD}/Mackup/books/
-ANSIBLE_HOSTS?="${PWD}/Mackup/books/hosts/metal.yml"
+ANSIBLE_ROOT_DIR=${PWD}/ansible/
+ANSIBLE_HOSTS?="${PWD}/ansible/hosts/metal.yml"
 
 define deploy_book
 	$(if $(($(LOG),true)),(ansible-playbook ${VERBOSITY} -i ${ANSIBLE_HOSTS} "${ANSIBLE_ROOT_DIR}/playbooks/$1.yml" | tee ${LOG_FILE}),(ansible-playbook ${VERBOSITY} -i ${ANSIBLE_HOSTS} ${ANSIBLE_ROOT_DIR}/playbooks/$1.yml))
