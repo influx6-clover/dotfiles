@@ -1331,5 +1331,6 @@
             "type": "command",
             "command": "workbench.action.toggleZenMode"
         }
-    ]
+    ],
+    "workbench.colorTheme": "Theme Darker"
 }

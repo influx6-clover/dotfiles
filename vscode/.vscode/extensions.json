@@ -3,6 +3,7 @@
         // General extensions
         "tal7aouy.theme",
         "vscodevim.vim",
+        "codezombiech.gitignore",
         "vadimcn.vscode-lldb",
         "usernamehw.errorlens",
         "ms-azuretools.vscode-docker",
@@ -14,11 +15,19 @@
         "CoenraadS.disableligatures",
         "octref.vetur",
         "formulahendry.auto-close-tag",
-        "skellock.just",
         // flexible command runner in rust
+        "skellock.just",
+        "SeaQL.firedbg-rust",
         // Nice to have cause I will still edit such files
         "tombonnike.vscode-status-bar-format-toggle",
+        "bierner.markdown-preview-github-styles",
+        "bierner.markdown-mermaid",
+        "yzhang.markdown-all-in-one",
+        "bradlc.vscode-tailwindcss",
+        "XadillaX.viml",
+        "Equinusocio.moxer-icons",
         "rebornix.toggle",
+        "GitHub.vscode-pull-request-github",
         "johnpapa.vscode-peacock",
         "VSpaceCode.whichkey",
         "drcika.apc-extension",

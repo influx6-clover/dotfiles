@@ -14,6 +14,7 @@
 				// General extensions
 				"tal7aouy.theme",
 				"vscodevim.vim",
+				"codezombiech.gitignore",
 				"vadimcn.vscode-lldb",
 				"usernamehw.errorlens",
 				"ms-azuretools.vscode-docker",
@@ -25,23 +26,34 @@
 				"CoenraadS.disableligatures",
 				"octref.vetur",
 				"formulahendry.auto-close-tag",
-				"skellock.just",
 				// flexible command runner in rust
+				"skellock.just",
+				"SeaQL.firedbg-rust",
 				// Nice to have cause I will still edit such files
 				"tombonnike.vscode-status-bar-format-toggle",
+				"bierner.markdown-preview-github-styles",
+				"bierner.markdown-mermaid",
+				"yzhang.markdown-all-in-one",
+				"bradlc.vscode-tailwindcss",
+				"XadillaX.viml",
+				"Equinusocio.moxer-icons",
 				"rebornix.toggle",
+				"GitHub.vscode-pull-request-github",
+				"johnpapa.vscode-peacock",
+				"VSpaceCode.whichkey",
+				"drcika.apc-extension",
+				"amodio.toggle-excluded-files",
+				"asvetliakov.vscode-neovim",
 				"mrmlnc.vscode-duplicate",
 				"qufiwefefwoyn.inline-sql-syntax",
 				"tamasfe.even-better-toml",
 				"Chouzz.vscode-better-align",
 				"dbaeumer.vscode-eslint",
-				// [Add your Language Specific Extensions Here]
-				"charliermarsh.ruff",
-				"serayuzgur.crates",
-				"njpwerner.autodocstring",
-				"JScearcy.rust-doc-viewer",
-				"qufiwefefwoyn.inline-sql-syntax",
-				"vadimcn.vscode-lldb"
+				// Python specifics extensions
+				"ms-python.python",
+				"samuelcolvin.jinjahtml",
+				"matangover.mypy",
+				"charliermarsh.ruff"
 			],
 			"settings": {
 				"diffEditor": {

@@ -10,7 +10,7 @@
     },
     {
         "key": "tab w",
-        "command": "whichkey.show",
+        "command": "whichkey.show"
         // "when": "vim.mode != 'insert' && !inputFocus"
     },
     {
@@ -31,24 +31,24 @@
     },
     {
         "key": "tab g",
-        "command": "workbench.view.scm",
+        "command": "workbench.view.scm"
     },
     {
         "key": "tab e",
-        "command": "workbench.view.explorer",
+        "command": "workbench.view.explorer"
     },
     {
         "key": "tab d",
-        "command": "workbench.view.debug",
+        "command": "workbench.view.debug"
     },
     {
         "key": "tab x",
-        "command": "workbench.view.extensions",
+        "command": "workbench.view.extensions"
     },
     {
         "key": "tab s",
         "name": "focus on active text editor",
-        "command": "workbench.action.focusActiveEditorGroup",
+        "command": "workbench.action.focusActiveEditorGroup"
     },
     {
         "key": "tab q",
@@ -58,7 +58,7 @@
     },
     {
         "key": "tab tab",
-        "command": "workbench.action.showCommands",
+        "command": "workbench.action.showCommands"
     },
     {
         "key": "shift+cmd+p",
@@ -66,12 +66,33 @@
     },
     {
         "key": "tab f",
-        "command": "workbench.action.quickOpen",
+        "command": "workbench.action.quickOpen"
     },
     {
         "key": "cmd+p",
         "command": "-workbench.action.quickOpen"
     },
+    {
+        "key": "ctrl+shift+q",
+        "command": "-workbench.action.quickOpenNavigatePreviousInViewPicker",
+        "when": "inQuickOpen && inViewsPicker"
+    },
+    {
+        "key": "ctrl+shift+q",
+        "command": "workbench.action.closeEditorsInGroup"
+    },
+    {
+        "key": "cmd+k w",
+        "command": "-workbench.action.closeEditorsInGroup"
+    },
+    {
+        "key": "ctrl+shift+alt+q",
+        "command": "workbench.action.closeAllGroups"
+    },
+    {
+        "key": "cmd+k shift+cmd+w",
+        "command": "-workbench.action.closeAllGroups"
+    }
     // -- File Explorer Navigation ----
     {
         "key": "tab+shift+a",
@@ -175,6 +196,6 @@
             "text": "\t"
         },
         "when": "terminalFocus"
-    }
+    },
     // -- End of Key Customization Overrides ----
 ]
