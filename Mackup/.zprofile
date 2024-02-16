@@ -4,7 +4,7 @@ export Dotfiles=$HOME/dotfiles
 
 test -d ~/.linuxbrew && eval $(~/.linuxbrew/bin/brew shellenv)
 test -d /home/linuxbrew/.linuxbrew && eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
-eval "$(/opt/homebrew/bin/brew shellenv)"
+[[ ! -f /opt/homebrew/bin/brew ]] ||  eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # add linuxbrew to the PATH
 export PATH=$PATH:$HOME/Devlabs/pkg/go/bin:$HOME/go/bin:$HOME/Devlabs/appImages
@@ -23,6 +23,5 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 set +o noclobber
 
 
-
 # Added by OrbStack: command-line tools and integration
-source ~/.orbstack/shell/init.zsh 2>/dev/null || :
+[[ ! -f ~/.orbstack/shell/init.zsh ]] ||  source ~/.orbstack/shell/init.zsh 2>/dev/null || :
