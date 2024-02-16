@@ -25,6 +25,7 @@
 				"bradgashler.htmltagwrap",
 				"vscode-icons-team.vscode-icons",
 				"CoenraadS.disableligatures",
+				"ms-vscode.makefile-tools",
 				"octref.vetur",
 				"formulahendry.auto-close-tag",
 				// flexible command runner in rust
