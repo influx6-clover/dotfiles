@@ -10,6 +10,54 @@
         // "when": "vim.mode != 'insert' && !inputFocus"
     },
     {
+        "key": "tab l",
+        "command": "workbench.action.navigateRight"
+    },
+    {
+        "key": "tab j",
+        "command": "workbench.action.navigateLeft"
+    },
+    {
+        "key": "tab k",
+        "command": "workbench.action.navigateDown"
+    },
+    {
+        "key": "tab k",
+        "command": "workbench.action.navigateUp"
+    },
+    {
+        "key": "tab k",
+        "command": "workbench.action.navigateDown"
+    },
+    {
+        "key": "shift+tab l",
+        "command": "workbench.action.navigateBack"
+    },
+    {
+        "key": "shift+tab h",
+        "command": "workbench.action.navigatePrevious"
+    },
+    {
+        "key": "tab n",
+        "command": "workbench.action.previousEditorInGroup"
+    },
+    {
+        "key": "tab m",
+        "command": "workbench.action.nextEditorInGroup"
+    },
+    {
+        "key": "shift+tab m",
+        "command": "workbench.action.previousEditor"
+    },
+    {
+        "key": "shift+tab n",
+        "command": "workbench.action.nextEditor"
+    },
+    {
+        "key": "tab g",
+        "command": "workbench.action.navigateEditorGroups"
+    },
+    {
         "key": "tab t",
         "command": "workbench.action.terminal.toggleTerminal"
     },
@@ -22,11 +70,11 @@
         "command": "workbench.action.terminal.focusPrevious"
     },
     {
-        "key": "tab z",
+        "key": "shift+tab z",
         "command": "workbench.action.toggleZenMode"
     },
     {
-        "key": "tab g",
+        "key": "shift+tab g",
         "command": "workbench.view.scm"
     },
     {
@@ -57,12 +105,12 @@
         "command": "workbench.action.showCommands"
     },
     {
-        "key": "shift+cmd+p",
-        "command": "-workbench.action.showCommands"
-    },
-    {
         "key": "tab f",
         "command": "workbench.action.quickOpen"
+    },
+    {
+        "key": "shift+cmd+p",
+        "command": "-workbench.action.showCommands"
     },
     {
         "key": "cmd+p",
@@ -192,6 +240,18 @@
             "text": "\t"
         },
         "when": "terminalFocus"
+    },
+    {
+        "key": "cmd+k alt+cmd+right",
+        "command": "-workbench.action.nextEditorInGroup"
+    },
+    {
+        "key": "alt+cmd+right",
+        "command": "-workbench.action.nextEditor"
+    },
+    {
+        "key": "shift+cmd+]",
+        "command": "-workbench.action.nextEditor"
     }
     // -- End of Key Customization Overrides ----
 ]
