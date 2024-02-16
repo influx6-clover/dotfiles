@@ -5,17 +5,13 @@
         "when": "editorTextFocus"
     },
     {
-        "key": "shift+ctrl+t",
-        "command": "workbench.action.terminal.toggleTerminal"
-    },
-    {
         "key": "tab w",
         "command": "whichkey.show"
         // "when": "vim.mode != 'insert' && !inputFocus"
     },
     {
         "key": "tab t",
-        "command": "workbench.action.terminal.focus"
+        "command": "workbench.action.terminal.toggleTerminal"
     },
     {
         "key": "tab right",
