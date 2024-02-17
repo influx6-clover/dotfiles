@@ -1332,5 +1332,7 @@
             "command": "workbench.action.toggleZenMode"
         }
     ],
-    "workbench.colorTheme": "Theme Darker"
+    "workbench.colorTheme": "Theme Darker",
+    "lldb.library": "~/.vsocde/extensions/codelldb/",
+    "firedbg.showWelcome": false
 }

@@ -234,14 +234,6 @@
         "when": "vim.active && vim.mode == 'Insert'"
     },
     {
-        "key": "shfit+tab",
-        "command": "type",
-        "args": {
-            "text": "\t"
-        },
-        "when": "terminalFocus"
-    },
-    {
         "key": "cmd+k alt+cmd+right",
         "command": "-workbench.action.nextEditorInGroup"
     },
@@ -252,6 +244,19 @@
     {
         "key": "shift+cmd+]",
         "command": "-workbench.action.nextEditor"
-    }
+    },
+    {
+        "key": "alt+space",
+        "command": "type",
+        "args": {
+            "text": "\t"
+        },
+        "when": "terminalFocus"
+    },
+    {
+        "key": "alt+space",
+        "command": "-workbench.action.terminal.sendSequence",
+        "when": "terminalFocus && terminalShellIntegrationEnabled && !accessibilityModeEnabled && terminalShellType == 'pwsh'"
+    },
     // -- End of Key Customization Overrides ----
 ]

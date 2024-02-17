@@ -13,6 +13,9 @@ services:
       - ..:/workspace:cached # where vscode expects to find project
       # Uncomment the next line to use Docker from inside the container. See https://aka.ms/vscode-remote/samples/docker-from-docker-compose for details.
       - /var/run/docker.sock:/var/run/docker.sock
+      # Added these so that we cache your extensions so they do not re-install on every restart
+      - .vscode-server/extensions/:/home/vscode/.vscode-server/extensions/
+      - .vscode-server/extensionsCache/:/home/vscode/.vscode-server/extensionsCache/
     # Overrides default command so things don't shut down after the process ends.
     command: /bin/sh -c "while sleep 1000; do :; done"
     # Runs app on the same network as the service container, allows "forwardPorts" in devcontainer.json function.
