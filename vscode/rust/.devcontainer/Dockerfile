@@ -1,8 +1,24 @@
 ARG VARIANT=1-bullseye
-
 FROM mcr.microsoft.com/devcontainers/rust:${VARIANT}
+
+ARG USERNAME=ewestudio
+ARG USER_UID=1001
+ARG USER_GID=${USER_UID}
 
 COPY .vscode/git.alias /home/vscode/.git.alias
 COPY .vscode/.gitconfig /home/vscode/.gitconfig
 
-RUN	echo 'source $HOME/.git.alias' >> /home/vscode/.bashrc
+RUN	echo 'source $HOME/.git.alias' >> /home/vscode/.bashrc \
+    && echo ${USER_GID} \
+    && echo ${USER_UID} \
+    && groupadd --gid ${USER_GID} ${USERNAME} || true \
+    && useradd --uid ${USER_UID} --gid ${USER_GID} ${USERNAME} \
+    && apt-get update \
+    && apt-get install -y sudo \
+    && echo ${USERNAME} ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/${USERNAME} \
+    && chmod 0440 /etc/sudoers.d/${USERNAME}
+
+USER ${USERNAME}
+
+VOLUME /home/${USERNAME}/.vscode-server/extensions
+VOLUME /home/${USERNAME}/.vscode-server/extensionsCache
