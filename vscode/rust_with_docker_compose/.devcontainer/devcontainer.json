@@ -34,7 +34,6 @@
 			"extensions": [
 				// General extensions
 				"tal7aouy.theme",
-				"vscodevim.vim",
 				"codezombiech.gitignore",
 				"vadimcn.vscode-lldb",
 				"usernamehw.errorlens",
