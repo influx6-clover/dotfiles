@@ -1,5 +1,5 @@
-ARG VARIANT=1-3.10-bookworm
-FROM mcr.microsoft.com/devcontainers/python:${VARIANT}
+ARG VARIANT=1-bullseye
+FROM mcr.microsoft.com/devcontainers/rust:${VARIANT}
 
 ARG USERNAME=ewestudio
 ARG USER_UID=1001
@@ -16,7 +16,8 @@ RUN	echo 'source $HOME/.git.alias' >> /home/${USERNAME}/.bashrc \
     && apt-get update \
     && apt-get install -y sudo \
     && echo ${USERNAME} ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/${USERNAME} \
-    && chmod 0440 /etc/sudoers.d/${USERNAME}
+    && chmod 0440 /etc/sudoers.d/${USERNAME} \
+    && echo PS1="'"'\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\ \033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '"'" >>  /home/${USERNAME}/.bashrc
 
 USER ${USERNAME}
 
