@@ -14,20 +14,16 @@
         "command": "workbench.action.navigateRight"
     },
     {
-        "key": "tab j",
+        "key": "tab h",
         "command": "workbench.action.navigateLeft"
     },
     {
-        "key": "tab k",
+        "key": "tab j",
         "command": "workbench.action.navigateDown"
     },
     {
         "key": "tab k",
         "command": "workbench.action.navigateUp"
-    },
-    {
-        "key": "tab k",
-        "command": "workbench.action.navigateDown"
     },
     {
         "key": "shift+tab l",
