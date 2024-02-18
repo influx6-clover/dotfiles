@@ -75,7 +75,7 @@
 				"ms-python.python",
 				"samuelcolvin.jinjahtml",
 				"matangover.mypy",
-				// [Add your Language Specific Extensions Here]
+				// Rust specifics extensions
 				"charliermarsh.ruff",
 				"serayuzgur.crates",
 				"njpwerner.autodocstring",
@@ -85,6 +85,9 @@
 				"rust-lang.rust-analyzer",
 				"hbenl.vscode-test-explorer",
 				"swellaby.vscode-rust-test-adapter",
+				"donjayamanne.githistory",
+				"DavidAnson.vscode-markdownlint",
+				"eamodio.gitlens"
 			],
 			"settings": {
 				"diffEditor": {

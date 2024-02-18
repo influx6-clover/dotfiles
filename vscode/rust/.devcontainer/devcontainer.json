@@ -60,6 +60,9 @@
 				"rust-lang.rust-analyzer",
 				"hbenl.vscode-test-explorer",
 				"swellaby.vscode-rust-test-adapter",
+				"donjayamanne.githistory",
+				"DavidAnson.vscode-markdownlint",
+				"eamodio.gitlens"
 			],
 			"settings": {
 				"diffEditor": {
