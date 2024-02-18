@@ -50,11 +50,16 @@
 				"tamasfe.even-better-toml",
 				"Chouzz.vscode-better-align",
 				"dbaeumer.vscode-eslint",
-				// Python specifics extensions
-				"ms-python.python",
-				"samuelcolvin.jinjahtml",
-				"matangover.mypy",
-				"charliermarsh.ruff"
+				// Rust specifics extensions
+				"charliermarsh.ruff",
+				"serayuzgur.crates",
+				"njpwerner.autodocstring",
+				"JScearcy.rust-doc-viewer",
+				"qufiwefefwoyn.inline-sql-syntax",
+				"vadimcn.vscode-lldb",
+				"rust-lang.rust-analyzer",
+				"hbenl.vscode-test-explorer",
+				"swellaby.vscode-rust-test-adapter",
 			],
 			"settings": {
 				"diffEditor": {
