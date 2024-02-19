@@ -15,7 +15,7 @@
     {
         "key": "tab w",
         "command": "whichkey.show"
-        // "when": "vim.mode != 'insert' && !inputFocus"
+        // "when": "neovim.mode != 'insert' && !inputFocus"
     },
     {
         "key": "tab l",
@@ -221,7 +221,7 @@
     {
         "key": "shift+k",
         "command": "editor.action.showHover",
-        "when": "editorTextFocus && (neovim.mode != 'insert' || vim.mode != 'insert')"
+        "when": "editorTextFocus && neovim.mode != 'insert'"
     },
     {
         "key": "ctrl+k ctrl+i",
@@ -235,7 +235,7 @@
         "args": {
             "text": "\t"
         },
-        "when": "vim.active && vim.mode == 'Insert'"
+        "when": "neovim.active && neovim.mode == 'Insert'"
     },
     {
         "key": "cmd+k alt+cmd+right",
