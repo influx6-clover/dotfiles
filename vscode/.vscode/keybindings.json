@@ -230,14 +230,6 @@
     },
     // -- Key Customization Overrides ----
     {
-        "key": "tab",
-        "command": "type",
-        "args": {
-            "text": "\t"
-        },
-        "when": "neovim.active && neovim.mode == 'Insert'"
-    },
-    {
         "key": "cmd+k alt+cmd+right",
         "command": "-workbench.action.nextEditorInGroup"
     },
@@ -248,6 +240,14 @@
     {
         "key": "shift+cmd+]",
         "command": "-workbench.action.nextEditor"
+    },
+    {
+        "key": "tab",
+        "command": "type",
+        "args": {
+            "text": "\t"
+        },
+        "when": "neovim.init && neovim.mode == 'insert'"
     }
     // -- End of Key Customization Overrides ----
 ]
