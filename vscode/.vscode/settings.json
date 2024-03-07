@@ -1341,5 +1341,7 @@
         "asvetliakov.vscode-neovim": 1
     },
     "search.showLineNumbers": true,
-    "csv-preview.lineNumbers": "source"
+    "csv-preview.lineNumbers": "source",
+    "editor.lineNumbers": "relative",
+    "zenMode.hideLineNumbers": false
 }
